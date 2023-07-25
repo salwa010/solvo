@@ -1,0 +1,33 @@
+<section class="header">
+  <img
+    src="../../assets/images/orange dots Image.png"
+    alt=""
+    class="top-left-img"
+  />
+  <img
+    src="../../assets/images/Group 2 Image.png"
+    alt=""
+    class="top-right-img"
+  />
+  <div class="global-width">
+    <div class="header-contents">
+      <img src="../../assets/images/logo.png" alt="" class="logo-img" />
+      <div class="right-box" [ngClass]="status ? '' : 'show'">
+        <!-- <div class="right-box"> -->
+        <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
+        <button class="main-btn">Careers</button>
+        <button class="main-btn">
+          About Us <span class="material-icons-round"> arrow_drop_down </span>
+        </button>
+        <button class="main-btn">Locations</button>
+        <button class="main-btn">
+          Resources <span class="material-icons-round"> arrow_drop_down </span>
+        </button>
+        <button class="main-btn btn2">WORK WITH US</button>
+      </div>
+      <span class="material-icons-round menu-icon" (click)="openNav()">
+        menu
+      </span>
+    </div>
+  </div>
+</section>

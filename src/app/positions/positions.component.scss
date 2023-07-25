@@ -1,0 +1,207 @@
+@use "base" as *;
+
+.positions {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  
+  .global-width {
+    .main-title {
+      text-align: center;
+      color: $gray;
+      font-size: 38px;
+      font-family: "Varela Round", sans-serif;
+      font-weight: 400;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: $orange;
+        width: 225px;
+        height: 4px;
+        top: 4rem;
+        left: 34%;
+        @media only screen and (max-width:415px) {
+          left: 17%;
+        }
+      }
+      @media only screen and (min-width:769px) {
+        &::after{
+          left: 41%;
+        }
+      }
+    }
+
+    .accordion-container {
+      // padding-top: 3rem;
+      // display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      // display: flex;
+      // align-items: flex-start;
+      gap: 10px;
+      margin-top: 50px;
+      @media only screen and (min-width:769px) {
+        flex-wrap: wrap;
+      }
+      &:nth-child(1){
+        
+      }
+      .accord-card {
+        // width: 626px;
+        // height: 368px;
+        width: 100%;
+        border: 5px solid $background;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        margin-top: 10px;
+        border-radius: 8px;
+        @media only screen and (min-width:769px) {
+          width: 49%;
+        }
+        .my_class {
+          .top-box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            .card-title {
+              color: $blue1;
+              font-size: 28px;
+              font-weight: 400;
+            }
+            button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: none;
+              background: $white;
+              .btn2 {
+                width: 166px;
+                height: 54px;
+                font-size: 16px;
+                letter-spacing: 0.64px;
+                font-weight: 600;
+                background-color: $orange;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                // border:1px solid $orange;
+                border: 1px solid $orange;
+                outline: none;
+                cursor: pointer;
+                border-radius: 25px;
+                &:hover{
+                  background-color: $white;
+                  color: $orange;
+                  border: 1px solid $orange;
+                }
+              }
+              span {
+                color: $white;
+                background-color: $orange;
+                border-radius: 50%;
+                width: 60px;
+                text-align: center;
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                height: 54px;
+              }
+            }
+          }
+
+          .content {
+            padding-top: 10px;
+            // padding-left: 1rem;
+
+            &.show {
+              display: none;
+            }
+            &.show2 {
+                display: none;
+              }
+              &.show3{
+                display: none;
+              }
+              &.show4{
+                display: none;
+              }
+              &.show5{
+                display: none;
+              }
+              &.show6{
+                display: none;
+              }
+              &.show7{
+                display: none;
+              }
+              &.show8{
+                display: none;
+              }
+            .li-btn {
+              width: 218px;
+              height: 54px;
+              background-color: $blue1;
+              font-size: 16px;
+              color: #fff;
+              transition: 0.4s ease-in-out;
+              &:hover{
+                color: $blue1;
+                background-color: $white;
+                border: 1px solid $blue1;
+                transform: scale(1.1);
+                box-shadow: 0px 0px 4px $blue1;
+
+              }
+            }
+            .lists {
+              list-style: none;
+              li {
+                position: relative;
+                padding-left: 20px;
+                font-size: 22px;
+                font-weight: 400;
+                font-family: "Varela Round", sans-serif;
+                text-decoration: underline;
+                margin-top: 23px;
+                display: flex;
+                align-items: center;
+                a{
+                  color: $gray;
+                }
+                &::after {
+                  position: absolute;
+                  content: "";
+                  background-color: $orange;
+                  border-radius: 50%;
+                  height: 8px;
+                  width: 8px;
+                  left: 0;
+                  
+                }
+              }
+            }
+            button {
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width:769px) {
+
+    .accordion-container{
+      display: flex;
+      align-items: flex-start;
+
+      padding-top: 3rem;
+      .accord-card{
+        width: 50%;
+      }
+    }
+    
+}

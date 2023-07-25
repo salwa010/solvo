@@ -1,0 +1,99 @@
+@use "base" as *;
+.faq {
+  background: $background;
+  padding-bottom: 1rem;
+  .global-width {
+    padding-top: 70px;
+    @media only screen and (min-width:769px) {
+      .global-width {
+        padding-top: 160px;}
+    }
+    .dots-sec {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      .orange {
+        background-color: #d26128;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        &:nth-child(2){
+            opacity: 80%;
+        }
+        &:nth-child(3){
+            opacity: 60%;
+        }
+      }
+    }
+    .main-title {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 38px;
+      font-weight: 400;
+      font-family: "Varela Round", sans-serif;
+      position: relative;
+      padding-bottom: 25px;
+      span {
+        font-size: 40px;
+        letter-spacing: -1.2px;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        background: $orange;
+        width: 225px;
+        height: 4px;
+        bottom: 0;
+        right: 40%;
+        @media only screen and (max-width:415px) {
+          right: 15%;
+
+        }
+      }
+    }
+
+    .accordion {
+      margin-top: 73px;
+      .example-accordion {
+        display: block;
+        width: 100%;
+        .example-accordion-item {
+          display: block;
+          // border: solid 1px #ccc;
+          .example-accordion-item-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 35px;
+            padding-left: 50px;
+            padding-bottom: 35px;
+            padding-right: 40px;
+            background-color: $white;
+            margin-top: 15px;
+            color: $orange;
+            font-size: 22px;
+            border-radius: 8px 8px 0 0;
+            font-family: "Varela Round", sans-serif;
+            .example-accordion-item-description {
+              font-size: 38px;
+            }
+          }
+          .example-accordion-item-body {
+            // padding-top: 22px;
+            padding-left: 50px;
+            padding-bottom: 42px;
+            padding-right: 40px;
+            font-family: "Poppins", sans-serif;
+            border-radius: 0 0 8px 8px;
+
+            background: $white;
+            color: $gray;
+            font-size: 18px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
